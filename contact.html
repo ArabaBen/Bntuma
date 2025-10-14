@@ -1,84 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-      
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BNTUMA . CONTACT</title>
+  <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Bahianita&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-      <style>
-            body {
-            margin: 0;
-            padding: 0;
-            }
-          
-           .fa {
-              padding: 5px;
-              font-size: 20px;
-              width: 30px;
-              text-align: center;
-              text-decoration: none;
-              margin: 5px 2px;
-              border-radius: 50%;
-            }
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">BNTUMA</h1>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            .fa:hover {
-                opacity: 0.7;
-            }
-
-            .fa-facebook {
-              background: #fff;
-              color: #BC8415;
-            }
-
-            .fa-twitter {
-              background: #fff;
-              color: #D0BF9E;
-            }
-
-            .fa-instagram {
-              background: #fff;
-              color: #D0BF9E;
-            }
-
-            .fa-tumblr {
-              background: #fff;
-              color: #D0BF9E;
-            }
-      </style>
-    </head>
-    
-    <body>
-        <header>
-            <ul>
-                <li style="float: left">
-                    <a href="home.html" style="font-family: Bahianita, sans-serif;
-                font-weight: 400; font-style: normal; font-size: 40px; padding-left: 55px;">BNTUMA</a></li>
-                <li>
-                    <a href="contact.html" class="header-links" style="padding-top: 30px; color: #BC8415">Contact</a></li>
-                <li>
-                    <a href="project.html" class="header-links" style="padding-top: 30px;">Projects</a></li>
-                <li>
-                    <a href="home.html" class="header-links" style="padding-top: 30px;">Services</a></li>
-                <li>
-                    <a href="about.html" class="header-links" style="padding-top: 30px;">About</a></li>
-            </ul>
-            <hr>
-        </header> 
-        <div class="contact-pg">
-            <div class="contact-img">
-                <img src="SEWINGMACHINE,WHITE.png" style="height:600px; width: 337.5px">
-            </div>
-            
-            <div class="contact-info">
-                <h3>Contact Us</h3>
+  <section class="contact">
+    <h3>Contact Us</h3>
+      <div class="contact-text">
+          <div class="contact-info">
                 <div>
                     <p>Phone Number <br><a href="#">+1(347)480-4623</a></p>
                     
@@ -91,7 +41,7 @@
                     <p>Location <br><a href="#">Brooklyn, New York, USA</a></p>
                     
                 </div>
-                <div  style="width: 40%; float: left;">
+                <div  style="width: 40%; float: left;" id="hours">
                     <p>Business Hours <br><a href="#">
                         Monday to Friday <br>
                         9:00am - 6:00pm<br>
@@ -99,7 +49,7 @@
                     </p>
                     
                 </div>
-                <div  style="width: 45%; float: right;">
+                <div  style="width: 45%; float: right;" id="follow">
                     <p style="margin-bottom: 2px;">Follow Us on Socials</p>
                     <div class="contact-socials" style="padding-right: 2px;">
                         <a href="https://www.tiktok.com/@bntuma" class="fa fa-tumblr" target="_blank"  style="color: #D0BF9E"></a>
@@ -109,15 +59,18 @@
                     </div>
                 </div>
             </div>
-        </div><br><br>
-        
-        
-        <footer style="width: 100%;">
-            <div class="content-footer" style="width: 100%;"><hr>
-                <p>BNTUAMA© | All Rights Reserved 2025 | buildt by BNTUMA </p>
-            
-            </div>
-        
-        </footer>
-    </body>
+           <img class="contact-img" alt="Contact Image" src="SEWINGMACHINE,WHITE.png" style="width: 250px;">
+      </div>
+    <!--<form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>--->
+  </section>
+
+  <footer>
+    <p>© 2025 BNTUMA | All rights reserved.</p>
+  </footer>
+</body>
 </html>
