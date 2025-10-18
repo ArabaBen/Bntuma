@@ -22,7 +22,7 @@ a {
 h3{
     font-family: "Bahianita", sans-serif;
     font-weight: 400;
-    font-size: 100px;
+    font-size: 65px;
     margin: 0;
 }
 h2 {
@@ -31,7 +31,7 @@ h2 {
     margin-bottom: 30px;
 }
 h4{
-  font-size: 35px;  
+  font-size: 30px;  
 }
 
 /*social media global */
@@ -116,7 +116,7 @@ font-size: 22px;
     width: 0%;
     height: 100%;
     background-color: white;
-    animation: progress-animation 2s ease-in-out forwards;
+    animation: progress-animation 3s ease-in-out forwards;
 }
 
 @keyframes progress-animation {
@@ -141,10 +141,12 @@ font-size: 22px;
     font-family: "Bahianita", sans-serif;
     font-size: 80px;
     font-weight: 400;
-    color: #5F6C1F;
+    color: #000;
+    margin: 0;
 }
 .nav-links a{
-        font-size: 26px;
+    font-size: 24px;
+    margin: 0;
 }
 
 .nav-links {
@@ -160,8 +162,8 @@ font-size: 22px;
 
 .nav-links li a:hover,
 .nav-links li a.active {
-  background: #5F6C1F;
-  color: #fff;
+  background: #fff;
+  color: #BC8415;
   border-radius: 5px;
 }
 
@@ -234,7 +236,7 @@ section {
   flex: 1 1 300px;
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 25px;
 }
 .about-text a{
     text-align: center;
@@ -319,6 +321,7 @@ section {
     color: #BC8415;
     font-weight: 500;
     margin-bottom: 50px;
+    font-size: 22px
 }
 .contact-info a{
     color: black;
@@ -378,7 +381,7 @@ footer {
         background: ;
     }
   .logo {
-    font-size: 24px;
+    font-size: 75px;
   }
 h1{ font-size: 130px;}
 
@@ -393,16 +396,7 @@ h1{ font-size: 130px;}
     padding: 8px 18px;
     font-size: 14px;
   }
-    #hours, #follow{
-        max-width:100%;
-        text-align: center;
-        float: right;
-        left: 140px;
-        position:absolute;
-    }
-    #follow{
-        top: 1030px;
-    }
+    
     .contact-img{
         width: 100%;
         display: none;
@@ -432,10 +426,5 @@ h1{ font-size: 130px;}
 	border-right: 8px solid;
 	border-left: 8px solid;
 }
-    
    
-    
-    
-    
 }
-
