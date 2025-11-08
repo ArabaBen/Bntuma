@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Project Estimator</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #faf8f6;
+      color: #222;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .calculator {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      padding: 28px 36px;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 18px;
+      color: #444;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: 500;
+    }
+
+    select, input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      background: #bfa26a;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #a58c5a;
+    }
+
+    .result {
+      text-align: center;
+      margin-top: 20px;
+      background: #f8f4ee;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 1.1rem;
+    }
+
+    small {
+      display: block;
+      text-align: center;
+      color: #824;
+      margin-top: 10px;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <h2>Estimate Your Custom Project</h2>
+
+    <label>Project Type</label>
+    <select id="projectType" onchange="updateYards()">
+      <option value="1.5">T-Shirt (1.5 yards)</option>
+      <option value="2.5">Skirt (2.5 yards)</option>
+      <option value="3">Blouse (3 yards)</option>
+      <option value="4">Dress (4 yards)</option>
+      <option value="5">Jumpsuit (5 yards)</option>
+      <option value="6">Gown (6 yards)</option>
+    </select>
+
+    <label>Fabric $ per Yard</label>
+    <input type="number" id="fabricPrice" placeholder="e.g. 40">
+
+    <label>Extra Materials (lace, lining, etc.)</label>
+    <input type="number" id="extras" placeholder="e.g. 10">
+
+    <label>Overhead (optional)</label>
+    <input type="number" id="overhead" placeholder="e.g. 5">
+
+    <button onclick="calculate()">Get Estimate</button>
+
+    <div class="result" id="result">Enter your details to get an estimate.</div>
+
+    <small>Final price may vary based on fabric type, detailing, and fitting complexity.</small>
+  </div>
+
+  <script>
+    function updateYards() {
+      const yards = document.getElementById("projectType").value;
+      document.getElementById("result").innerHTML = `Selected fabric: ${yards} yards`;
+    }
+
+    function calculate() {
+      const fabricYards = parseFloat(document.getElementById("projectType").value);
+      const fabricPrice = parseFloat(document.getElementById("fabricPrice").value) || 0;
+      const extras = parseFloat(document.getElementById("extras").value) || 0;
+      const overhead = parseFloat(document.getElementById("overhead").value) || 0;
+
+      // Hidden business settings
+      const profitMargin = 0.5; // 50% markup (hidden from customer)
+      const hourlyRate = 20;    // your internal labor rate
+      const avgHours = 5;       // average time per project (you can adjust)
+
+      const fabricCost = fabricYards * fabricPrice;
+      const laborCost = avgHours * hourlyRate;
+      const totalCost = fabricCost + laborCost + extras + overhead;
+
+      const sellingPrice = totalCost / (1 - profitMargin);
+
+      document.getElementById("result").innerHTML = `
+        <strong>Estimated Price:</strong><br>
+        $${sellingPrice.toFixed(2)} (USD)
+      `;
+    }
+  </script>
+</body>
+</html>
+
+
+<!--
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Project Price Estimator</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #faf8f6;
+      color: #222;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+    .calculator {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 24px 32px;
+      max-width: 500px;
+      width: 100%;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #444;
+    }
+    label {
+      display: block;
+      font-weight: 500;
+      margin-top: 10px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-top: 6px;
+      font-size: 1rem;
+    }
+    button {
+      width: 100%;
+      background: #bfa26a;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #a58c5a;
+    }
+    .result {
+      text-align: center;
+      margin-top: 20px;
+      background: #f8f4ee;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <h2>Project Price Estimator</h2>
+    
+    <label>Fabric Yards</label>
+    <input type="number" id="fabricYards" placeholder="e.g. 1.2">
+
+    <label>Fabric $ per Yard</label>
+    <input type="number" id="fabricPrice" placeholder="e.g. 48">
+
+    <label>Notions Cost</label>
+    <input type="number" id="notionsCost" placeholder="e.g. 5">
+
+    <label>Hours Worked</label>
+    <input type="number" id="hoursWorked" placeholder="e.g. 2">
+
+    <label>Hourly Rate ($)</label>
+    <input type="number" id="hourlyRate" placeholder="e.g. 20">
+
+    <label>Overhead ($)</label>
+    <input type="number" id="overhead" placeholder="e.g. 10">
+
+    <label>Profit Margin (in %)</label>
+    <input type="number" id="profitMargin" placeholder="e.g. 50">
+
+    <button onclick="calculate()">Calculate Price</button>
+
+    <div class="result" id="result">Enter details to calculate estimate.</div>
+  </div>
+
+  <script>
+    function calculate() {
+      const fabricYards = parseFloat(document.getElementById("fabricYards").value) || 0;
+      const fabricPrice = parseFloat(document.getElementById("fabricPrice").value) || 0;
+      const notionsCost = parseFloat(document.getElementById("notionsCost").value) || 0;
+      const hoursWorked = parseFloat(document.getElementById("hoursWorked").value) || 0;
+      const hourlyRate = parseFloat(document.getElementById("hourlyRate").value) || 0;
+      const overhead = parseFloat(document.getElementById("overhead").value) || 0;
+      const profitMargin = (parseFloat(document.getElementById("profitMargin").value) || 0) / 100;
+
+      const fabricCost = fabricYards * fabricPrice;
+      const laborCost = hoursWorked * hourlyRate;
+      const totalCost = fabricCost + notionsCost + laborCost + overhead;
+
+      const sellingPrice = totalCost / (1 - profitMargin);
+
+      document.getElementById("result").innerHTML = `
+        <strong>Estimated Project Cost</strong><br>
+        Fabric Cost: $${fabricCost.toFixed(2)}<br>
+        Labor Cost: $${laborCost.toFixed(2)}<br>
+        Total Cost: $${totalCost.toFixed(2)}<br>
+        <hr>
+        <strong>Suggested Selling Price:</strong> $${sellingPrice.toFixed(2)}
+      `;
+    }
+  </script>
+</body>
+</html>
+-->
