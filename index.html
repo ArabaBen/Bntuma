@@ -10,63 +10,117 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Bahianita&display=swap" rel="stylesheet">
 <style>
-        body{
-            background-image: url(UMA_PRINT.png);
-            color: black;
-            width: 100%;
-            height: auto;
-            padding: 0;
-            margin: 0;}
-            frame{
-                
-            }
+    body{
+    background-image: url(UMA_PRINT.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 90%;
+    background-color: #fff;
+    color: white;
+    padding: 0;
+    margin: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
 
-    
+    img{
+    width: 100%;
+    object-fit:contain;
+    }
+
     /*PROGRESS BAR SETTING*/
-.landing-p{
+    .landing-p{
     top: 40%;
     position: absolute;
     text-align: center;
     right: 26%;
-}
+    }
 
-.frame{
-	border: 3px solid black;
-  	padding: 25px 40px ;
-	background-color: white;
-	position: fixed;
-	right: 10%;
-	top: 18%;
-	width: 70%;
-	height: 60%; 
-	text-align: center;	
-	margin-left: 5%;
-}
-.loading-bar {
-	border-color: #000;
-	border: 36px;
+    /*.frame{*/
+    border: 3px solid black;
+    padding: 25px 40px ;
+    background-color: white;
     position: fixed;
-    top: 70%;
+    right: 10%;
+    top: 18%;
+    width: 70%;
+    height: 60%; 
+    text-align: center;	
+    margin-left: 5%;
+
+    /*.loading-bar {*/
+    border-color: #fff;
+    border: 36px;
+    position: fixed;
+    top: 20%;
     left: 28%;
     width: 50%;
     height: 35px;
-    background-color: #000;
-    border-bottom: 8px solid #333;
-    border-top: 8px solid #333;
-	border-right: 8px solid;
-	border-left: 8px solid;
-}
-            
-        </style>
-        
+    background-color: #fff;
+    border-bottom: 8px solid #fff;
+    border-top: 8px solid #fff;
+    border-right: 8px solid;
+    border-left: 8px solid;
+    }
+/*    index space */
+    
+    
+ /* Center the content in the middle of the full page */
+  .centered-container {
+    background-color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+  }
+
+  .typewriter-wrapper {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    font-weight: 600;
+    font-size: 1.3rem;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #000;
+      background-color: #fff;
+    text-align: center;
+            margin-top: 95px;
+
+  }
+
+  /* Blinking cursor */
+  .typewriter-caret {
+    display: inline-block;
+    width: 0.14em;
+    height: 1.05em;
+    background: currentColor;
+    margin-left: 4px;
+    animation: blink 1s steps(2, start) infinite;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+    </style> 
     </head>
 	 
     <body>
         <main>
+            <!-- 
             <div class="frame">
-                <h3 style="font-size: 130px;">:BNTUMA:</h3>
+                <h3 style="font-size: 130px;">:BNTUMA</h3>
                 <p class="landing-p"> Accessible * Sustainable * Designs </p>
+            </div>-->
+
+            <!-- Wrapper that centers everything -->
+            <div class="centered-container">
+              <h1 class="typewriter-wrapper" aria-live="polite" aria-atomic="true">
+                <span id="typewriter-target"></span>
+                <span class="typewriter-caret" aria-hidden="true"></span>
+              </h1>
             </div>
+            
             <div class="loading-bar">
                 <div class="progress"></div>
             </div>
@@ -85,7 +139,31 @@
             });
         };
         </script>
+        <script>
+          (function () {
+            const text = "CUSTOM TAILORED DESIGNS";
+            const typeSpeed = 95; // ms per letter
+            const target = document.getElementById('typewriter-target');
 
+            let index = 0;
+
+            function type() {
+              target.textContent = text.substring(0, index);
+              index++;
+
+              if (index <= text.length) {
+                setTimeout(type, typeSpeed);
+              }
+              // no delete, no loop
+            }
+
+            if (document.readyState === "loading") {
+              document.addEventListener("DOMContentLoaded", type);
+            } else {
+              type();
+            }
+          })();
+        </script>
 
 </body>
 </html>
