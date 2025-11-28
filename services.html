@@ -15,7 +15,7 @@
       p{
           font-size: 20px;
       }
-    #panel, #panel2, #panel3, .flip {
+    #panel, #panel2, #panel3, #panel4, .flip {
       text-align: center;
       background-color: #04AA6D;
       color: white;
@@ -23,7 +23,7 @@
       cursor: pointer;
     }
 
-    #panel, #panel2, #panel3 {
+    #panel, #panel2, #panel3, #panel4 {
       display: none;
       position: relative;
       background: #f9f9f9;
@@ -56,15 +56,16 @@
   </style>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <h1 class="logo">BNTUMA</h1>
-      <ul class="nav-links">
-        <li><a href="home.html">Home</a></li>
+   <header>
+    <img src="logo2.png" width="200px">
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <nav id="mobileMenu">
+      <ul>
+       <li><a href="home.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a class="active" href="services.html">Services</a></li>
+        <li><a href="services.html">Services</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -119,8 +120,28 @@
           </p>
         <a href="mailto:bntuma.art@gmail.com" target="_blank" style="color:#04AA6D; font-weight:bold;">Email Us</a>
     </div>
-    </div>
+    
+    <!-- CARD 4 -->
+      <div class="card" onclick="openPanel('panel4')">
+        <img src="https://i.pinimg.com/736x/77/43/db/7743dbea4e3e58f08985603be7f1e6a9.jpg">
+        <h4>Learn to Sew</h4>
+        <p>We offer private sewing lessons as well as online tutorials. </p>
+      </div>
+
+      <div id="panel4">
+        <button class="close-btn" onclick="closePanel('panel4')">×</button>
+            <h4>Learn to Sew</h4>
+            <p>Develop a new hobby and build valuable skills through our private one-on-one sewing lessons. We offer several packages to choose from. If you need a service that’s not listed, please email us or use the inquiry form below: <a href="#" style="color:#04AA6D; font-weight:bold;"> Sign Up For Sewing lessons</a> 
+                <br>
+            Follow along with our sewing tutorials on social media: <a target="_blank" href="https://www.tiktok.com/@bntuma/video/7565721313382354189?embed_source=121374463%2C121468991%2C121439635%2C121749182%2C121433650%2C121404359%2C121497414%2C121477481%2C121351166%2C121811500%2C121960941%2C121860360%2C121487028%2C121679410%2C121331973%2C120811592%2C120810756%2C121885509%3Bnull%3Bembed_share&refer=embed&referer_url=127.0.0.1%3A62353%2Fgallery.html&referer_video_id=7565721313382354189" style="color:#04AA6D; font-weight:bold;">Online Sewing Tutorials</a>. 
+          </p>
+        <a href="mailto:bntuma.art@gmail.com" target="_blank" style="color:#04AA6D; font-weight:bold;">Email Us</a>
+      </div>
+        
+      </div>
   </section>
+    
+    
 
   <div class="about-social" style="width: 100%; background-color: white; color: #000;">
     <p class="abt-socpara">Follow Us on Social Media!</p>
@@ -135,6 +156,7 @@
     <p>© 2025 BNTUMA | All rights reserved.</p>
   </footer>
 
+    <script src="Navbar.js"></script>
   <script>
     function openPanel(id) {
       document.getElementById(id).style.display = "block";
