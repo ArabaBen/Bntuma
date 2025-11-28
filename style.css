@@ -251,7 +251,17 @@ section {
     font-size: 20px;
     padding: 30px;
 }
-
+.sew-lessons{
+    height: 170px;
+    padding-top: 35px;
+    background-color: #414A1E;
+    color: #fff; 
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+    padding: 30px;
+    
+}
 
 
 /* ABOUT */
@@ -500,7 +510,7 @@ h1{ font-size: 130px;}
 
 
 
-/*NEW CONTACT PAGE AND MEDIA QUIRES */
+/* header and navbar NEW CONTACT PAGE AND MEDIA QUIRES */
  header {
       display: flex;
       justify-content: space-between;
@@ -592,5 +602,3 @@ h1{ font-size: 130px;}
         padding: 0;
       }
     }
-
-
