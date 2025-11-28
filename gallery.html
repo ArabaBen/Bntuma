@@ -14,18 +14,20 @@
     p{
         font-size: 25px;
     }
- </style>
+    
+    </style>
 </head>
 <body>
   <header>
-    <nav class="navbar">
-      <h1 class="logo">BNTUMA</h1>
-      <ul class="nav-links">
-        <li><a href="home.html">Home</a></li>
+    <img src="logo2.png" width="200px">
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <nav id="mobileMenu">
+      <ul>
+       <li><a href="home.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a class="active" href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -87,6 +89,7 @@
   <footer>
     <p>© 2025 BNTUMA | All rights reserved.</p>
   </footer>
+    <script src="Navbar.js"></script>
+
 </body>
 </html>
-
