@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Bahianita&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     
         
     <style>
@@ -64,17 +63,19 @@
 </head>
 <body>
   <header>
-    <nav class="navbar">
-      <h1 class="logo">BNTUMA</h1>
-      <ul class="nav-links">
-        <li><a class="active" href="home.html">Home</a></li>
+    <img src="logo2.png" width="200px">
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <nav id="mobileMenu">
+      <ul>
+       <li><a href="home.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
+
 
   <section class="hero">
     <div class="hero-text">
@@ -127,7 +128,7 @@ As a hands-on, customer-focused studio, we offer a two-week turnaround time. Thi
         </div>
     </section>
     <div class="servicesec2">
-        <p> fill out inqury form to get started <br>
+        <p> Fill out inqury form to get started <br>
             <a href="https://forms.gle/H2RuECBW9JuBxnm78" target="_blank" class="btn" style="color: white; background-color: #BC8415; border: 2px solid white;">Inquiry form</a>
         </p>
         <p>Want a quick estimate? Try our beta calculator   <br>
@@ -156,7 +157,7 @@ Please view price list below:
 <!--    LEAVE A REVIEW -->
     <div class="reviewUs">
     <p>Tell us about your BNTUMA Studio experince</p>
-    <a href="https://g.page/r/CcfZsujhDKriEBM/review" style="border: 2px solid white; padding: 4px">Leave us a review!</a>
+    <a href="https://g.page/r/CcfZsujhDKriEBM/review" style="border: 2px solid white; padding: 10px">Leave us a review!</a>
     </div>
    
     <!--    SOCIAL MEDIA BUTTONS -->
@@ -176,5 +177,13 @@ Please view price list below:
   <footer>
     <p>© 2025 BNTUMA. All rights reserved.</p>
   </footer>
+    <script src="Navbar.js">
+        function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("show");
+}
+
+    </script>
+    
 </body>
 </html>
