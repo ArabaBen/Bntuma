@@ -10,14 +10,111 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Bahianita&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+        margin: 0;
+    }
 
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background: #000;
+      color: #fff;
+      position: sticky;
+      top: 0;
+    }
+
+    .menu-btn {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      height: 100vh;
+      width: 70%;
+      background: #000;
+      color: #fff;
+      padding-top: 4rem;
+      transition: 0.3s ease;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      padding: 1rem;
+      border-bottom: 1px solid #333;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    nav.show { left: 0; }
+
+    section { padding: 2rem; }
+  
+
+    /* --- NEW RESPONSIVE 3‑GRID --- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .contact-grid section {
+      background: #f5f5f5;
+      padding: 1.5rem;
+      border-radius: 12px;
+    }
+
+    @media (min-width: 700px) {
+      .contact-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 768px) {
+      .menu-btn { display: none; }
+
+      nav {
+        position: static;
+        height: auto;
+        width: auto;
+        background: none;
+        display: block;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 2rem;
+      }
+
+      nav ul li {
+        border: none;
+        padding: 0;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <nav class="navbar">
-      <h1 class="logo">BNTUMA</h1>
-      <ul class="nav-links">
-        <li><a href="home.html">Home</a></li>
+    <img src="logo2.png" width="200px">
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <nav id="mobileMenu">
+      <ul>
+       <li><a href="home.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="gallery.html">Gallery</a></li>
@@ -26,52 +123,52 @@
     </nav>
   </header>
 
-  <section class="contact">
-    <h3>Contact Us</h3>
-      <div class="contact-text">
-          <div class="contact-info">
-                <div>
-                    <p>Phone Number <br><a href="#">+1(347)480-4623</a></p>
-                    
-                </div>
-                <div>
-                    <p>Email Address <br><a href="mailto:bntuma.art@gmail.com" target="_blank">Bntuma.art@gmail.com</a></p>
-                    
-                </div>
-                <div>
-                    <p>Location <br><a href="#">Brooklyn, New York, USA</a></p>
-                    
-                </div>
-                <div  style="width: 40%; float: left;" id="hours">
-                    <p>Business Hours <br><a href="#">
-                        Monday to Friday <br>
-                        9:00am - 6:00pm<br>
-                        Weekend - Flexible</a>
-                    </p>
-                    
-                </div>
-                <div  style="width: 45%; float: right;" id="follow">
-                    <p style="margin-bottom: 2px;">Follow Us on Socials</p>
-                    <div class="contact-socials" style="padding-right: 2px;">
-                        <a href="https://www.tiktok.com/@bntuma" class="fa fa-tumblr" target="_blank"  style="color: #D0BF9E"></a>
-                        <!---<a href="#" class="fa fa-twitter" target="_blank"></a>--->
-                        <a href="https://www.instagram.com/bybntuma/" class="fa fa-instagram" target="_blank"  style="color: #D0BF9E"></a>
-                        <a href="https://www.facebook.com/profile.php?id=61565001016235" class="fa fa-facebook" target="_blank" style="color: #D0BF9E"></a>
-                    </div>
-                </div>
-            </div>
-           <img class="contact-img" alt="Contact Image" src="SEWINGMACHINE,WHITE.png" style="width: 250px;">
-      </div>
-    <!--<form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>--->
-  </section>
+<img src="plant-and-machine.jpg" style="width:100%;" class="c-img">
+ 
 
-  <footer>
-    <p>© 2025 BNTUMA | All rights reserved.</p>
-  </footer>
+  <!-- NEW 3‑GRID WRAPPER BELOW IMAGE -->
+  <div class="contact-grid">
+
+    <section id="c-hours" class="c-hours">
+      <h1>Hours</h1>
+      <p><b>Business Hours </b>
+          <br>
+        <a href="#">Monday to Friday 
+            <br>9:00am - 6:00pm<br>
+            <br>Weekend - Only by appointment</a>
+      </p>
+        <p><b>Location</b> <br>
+        <a href="#">Brooklyn, New York, USA</a>
+      </p>
+    </section>
+
+    <section id="c-details" class="c-details">
+        <h1>Contact</h1>
+            <p><b>Phone Number</b>
+                <br>
+                <a href="#">+1(347)480-4623</a>
+            </p>
+            <p><b>Email Address</b>
+                <br>
+                <a href="mailto:bntuma.art@gmail.com" target="_blank">Bntuma.art@gmail.com</a>
+            </p>
+    </section>
+
+    <section id="c-socails" class="c-socails">
+      <h1>Follow Us</h1>
+      <div class="contact-socials">
+        <a href="https://www.tiktok.com/@bntuma" class="fa fa-tumblr" target="_blank" style="color:#D0BF9E"></a>
+        <a href="https://www.instagram.com/bybntuma/" class="fa fa-instagram" target="_blank" style="color:#D0BF9E"></a>
+        <a href="https://www.facebook.com/profile.php?id=61565001016235" class="fa fa-facebook" target="_blank" style="color:#D0BF9E"></a>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
