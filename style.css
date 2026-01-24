@@ -389,6 +389,11 @@ footer {
   font-size: 14px;
 }
 
+
+
+
+
+
 /* ---------- MEDIA QUERIES ---------- */
 @media (max-width: 768px) {
     body{
@@ -480,7 +485,7 @@ h1{ font-size: 130px;}
 	display: none;
 }
 .loading-bar {
-	border-color: #000;
+	border-color: #fff;
 	border: 36px;
     position: fixed;
     top: 0%;
@@ -488,8 +493,8 @@ h1{ font-size: 130px;}
     width: 50%;
     height: 5px;
     background-color: #000;
-    border-bottom: 8px solid #333;
-    border-top: 8px solid #333;
+    border-bottom: 8px solid #fff;
+    border-top: 8px solid #fff;
 	border-right: 8px solid;
 	border-left: 8px solid;
 }
@@ -575,13 +580,41 @@ h1{ font-size: 130px;}
       border-radius: 12px;
     }
 
+
+/*MEDIA QUIERES */
+      /*SMALL SCREEN */
+    @media (max-width: 680px) {
+      body{
+        background-color: green;
+      }
+      .home-content p, .servdeets p, .alterationdeets p{
+        font-size: 19px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .servdeets img, .alterationdeets img{
+        width: 100%;
+      }
+      .hero{
+        background: url('plant-and-machine.jpg') center/cover no-repeat;}
+      span{
+        font-size: 20px;
+      }
+    }
+        /*MEDIUM SCREENS*/
     @media (min-width: 700px) {
       .contact-grid {
         grid-template-columns: repeat(3, 1fr);
       }
+      body{
+        background-color: red;
+      }
     }
-
+      /*LARGE SCREENS */
     @media (min-width: 768px) {
+      body{
+        background-color: blue;
+      }
       .menu-btn { display: none; }
 
       nav {
