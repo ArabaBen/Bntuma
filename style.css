@@ -585,7 +585,7 @@ h1{ font-size: 130px;}
       /*SMALL SCREEN */
     @media (max-width: 680px) {
       body{
-        background-color: green;
+        background-color: ;
       }
       .home-content p, .servdeets p, .alterationdeets p{
         font-size: 19px;
@@ -607,13 +607,13 @@ h1{ font-size: 130px;}
         grid-template-columns: repeat(3, 1fr);
       }
       body{
-        background-color: red;
+        background-color: ;
       }
     }
       /*LARGE SCREENS */
     @media (min-width: 768px) {
       body{
-        background-color: blue;
+        background-color: ;
       }
       .menu-btn { display: none; }
 
@@ -635,3 +635,4 @@ h1{ font-size: 130px;}
         padding: 0;
       }
     }
+
