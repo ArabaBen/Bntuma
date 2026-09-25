@@ -4,36 +4,634 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BNTUMA . Theatre</title>
-
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="A4-2.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Bahianita&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="A4-2.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Bahianita&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--
   <script>
     window.location.href = "https://arababen.github.io/THEATREDESIGN/tuckever.html";
   </script>
+  -->
+  <style>
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+    body {
+      font-family: "Bacasime Antique", serif;
+      line-height: 1.6;
+    }
+    header{
+      text-align: center;
+      width: 100%;
+      font-size: 28px;
+      position: static;
+    }
+    header a{
+     
+    }
+    .designSection-hero{
+      min-height: 100vh;
+      background-image: url("https://images.pexels.com/photos/29660540/pexels-photo-29660540.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .designSection1{
+      width: 70%;
+      max-width: 900px;
+      
+      /* centers the entire paragraph box */
+      margin: 30px auto;
+      margin-top: 80px;
+      
+      /* black at 46% opacity */
+      background-color: rgba(0, 0, 0, 0.73);
+      padding: 20px 30px;
+      
+      /* text stays left aligned */
+      text-align: left;
+      color: white;
+      box-sizing: border-box;
+    }
+    .designSection1 p{
+      tmargin: 0 0 20px 0;
+      line-height: 1.4;
+      padding-bottom: 25px;
+    }
+
+    .designSection1 p:last-child {
+      margin-bottom: 0;
+    }
+    p{
+      font-size: 22px;
+    }
+    .designSection-hero a{
+      background-color: #4c4c4c;
+      color: #fff;
+      padding: 10px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block; 
+      border-radius: 15px;
+      }
+    
+    
+    
+    /*modal*/
+    /* -----------------------
+   PROJECT
+------------------------ */
+
+.theater-project, .theater-project2, .theater-project3 {
+    width: 100%;
+    height: 650px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.theater-project > img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+    .theater-project2{
+       min-height: 100vh;
+
+      background-image: url("img-uc-play-legup.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .theater-project3{
+      min-height: 100vh;
+
+      background-image: url("img-jimmy-aliens.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+/* PROJECT DESCRIPTION */
+
+.project-caption {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 55%;
+    max-width: 750px;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    padding: 45px 35px;
+
+    box-sizing: border-box;
+
+    color: white;
+    text-align: center;
+}
+
+.project-caption p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+
+/* -----------------------
+   MODAL
+------------------------ */
+
+.project-modal {
+    display: none;
+
+    position: fixed;
+    z-index: 1000;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow-y: auto;
+
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+
+/* MODAL PAGE */
+
+.modal-content {
+    position: relative;
+
+    background-color: white;
+
+    width: 85%;
+    max-width: 1100px;
+
+    margin: 50px auto;
+
+    padding: 60px;
+
+    box-sizing: border-box;
+
+    color: black;
+}
+    .modal-content p{
+      padding-bottom: 20px;
+    }
+
+/* X BUTTON */
+
+.modal-close {
+    position: absolute;
+
+    right: 25px;
+    top: 15px;
+
+    font-size: 40px;
+    font-weight: 300;
+
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    opacity: 0.5;
+}
+
+
+/* MODAL CONTENT */
+
+.modal-content h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.modal-content h2 {
+    margin-top: 50px;
+}
+
+.modal-content p {
+    line-height: 1.6;
+  
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+}
+
+    
+    /*sub section images */
+    
+    .three-image-section {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+
+.three-image-section img {
+    width: 33.333%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/* -----------------------
+   MOBILE
+------------------------ */
+
+@media (max-width: 768px) {
+
+    .theater-project {
+        height: 500px;
+    }
+
+    .project-caption {
+        width: 75%;
+        padding: 30px 20px;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 20px auto;
+        padding: 50px 25px;
+    }
+
+    .modal-close {
+        right: 15px;
+        top: 8px;
+    }
+}
+    
+    
+    
+    
+    
+    
+    /*mdeai change*/
+    @media (max-width: 768px) {
+      .designSection1 {
+      width: 90%;
+      padding: 18px 20px;
+      }
+    }
+    
+
+    
+    
+    
+    .main-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: black;
+    padding: 8px;
+}
+
+.main-nav a {
+    flex: 1;
+
+    padding: 8px 16px;
+
+    color: white;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 22px;
+}
+
+.main-nav a:hover {
+    background-color: #cccccc;
+    color: black;
+}
+
+@media (max-width: 600px) {
+
+    .main-nav {
+        padding: 6px;
+    }
+
+    .main-nav a {
+        padding: 8px 4px;
+        font-size: 16px;
+    }
+}
+
+    
+  </style>
 </head>
 
 <body>
-  <header>
-    <img src="logo2.png" width="200px">
+ <header>
+    <!-- Navigation -->
+<div class="main-nav">
+    <a href="https://www.bntuma.com">Bespoke Designs</a>
+    <a href="https://www.bntuma.com/about">About</a>
+    <a href="https://www.bntuma.com/contact">Contact</a>
+   </div>
+</header>
+  
+  <div class="designSection-hero">
+    <h3 style="text-align: center; color: white">Theater &amp; and Cosutme design</h3>
+  
+    <div class="designSection1">
+      <p>
+          Hi! My name is Araba and my work in theater and costume design combines garment
+          construction, visual storytelling, and an understanding of how clothing supports
+          character and their performances. My experience includes costume and wardrobe work
+          for Off-Broadway productions, collaborating with directors, production teams, and
+          performers from early concept development through rehearsals and final performances.
+          My foremost goal is ensuring clothes truly reflect a character's disposition.
+      </p>
 
-    <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
-    <nav id="mobileMenu">
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a class="active" href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+      <p>
+          I begin all processes with research, character analysis, and initial design concepts
+          through iterative development, fittings, alterations, and final garment preparation.
+          I consider not only the visual direction of a production, but also movement,
+          functionality, continuity, and the practical demands placed on costumes throughout
+          a performance.
+      </p>
+      <p>
+          With experience in bespoke garment construction and tailoring, I bring a hands-on
+          approach to every costume project I take on.
+      </p>
+    </div>
+    
+    <a style="background-color: #1d1a1a;" href="mailto:bntuma.art@gmail.com?subject=Costume%20Inquiry" target="_blank">Contact Us</a>
+    
+    
+  </div>
+  
+  <!--TUCK EVERLATING -->
+  <!-- PROJECT 1 -->
+  <section class="theater-project" onclick="openModal('project1Modal')" style="background-color: #efd10f">
+
+    <img src="img-tuckever-book.jpg" alt="Tuck Everlasting Costume Design">
+
+    <div class="project-caption">
+    <p>
+    Concept: Tuck Everlasting by Natalie Babbitt<br>
+    Role: Costume Designer / 2024 <br>
+      -Click to View- 
+    </p>
+    </div>
+
+  </section>
+
+
+  <!-- PROJECT 1 MODAL -->
+  <div id="project1Modal" class="project-modal">
+
+      <div class="modal-content">
+
+        <span class="modal-close"
+              onclick="closeModal(event, 'project1Modal')">&times;</span>
+
+        <h4>Tuck Everlasting - A Play Concept</h4>
+        <img src="img-tuck-moodboard.png"
+             alt="Tuck Everlasting Costume Mood Board"
+             class="modal-image">
+        <p>
+            This project explored costume concepts for Tuck Everlasting (a novel by Natile Babbit),
+            beginning with research into the setting, period, characters,
+            silhouettes, textiles, and visual language of the production.
+        </p>
+
+        <h4> Research </h4>
+
+        <p><strong>Setting:</strong><br> 
+            1881, in Treegap, a medium-small town surrendered by meadows, forests, 
+            small curvy hills. Takes place during the turn of the 20th century in New York. 
+          (Gilded Age 1865 -1904 between reconstruction era and Progressive era).<br>
+
+          Duration: Several days during the first hot week of August 
+
+        </p>
+        <p><strong> Synopsis:</strong><br>
+          Tuck Everlasting is a captivating tale centered around a ten-year-old girl 
+          named Winne Foster who yearns to escape her confined, privileged life in pursuit 
+          of adventure. Her life takes a dramatic turn when she stumbles upon a peculiar 
+          toad, a mysterious man in a yellow suit, and a solemn family. Each of these e
+          ncounters throughout the book serve as the catalyst for a journey of 
+          self-discovery and maturation for young Winnie. Uncovering answers to life's 
+          true challenges between values of youth and aging, love and fear, family/tradition
+          and self realization.
+        </p>
+
+
+        <p><strong> History of New York in 1880’s: </strong><br>
+          The average age for 1st time married women were between 20-22, but during this 
+          period women began courting as early as 15 or 16 years old. In regards to popular
+          fabrics- cotton and silk were popular for gowns but also including wool(sheep) and
+          linen(flax plant). Most expensive being silk (often woven plain or patterned) and 
+          cotton. There was an increased need and use of sheer textiles to create light looks.
+          Popular colors at the time was also vivid blues, greens, purples and yellow. 
+          For clothing: delicate, whites, blue, lilac, pink, pale brown or gray- often with
+          dark trimmings i.e black on pink and white. Dresses of two colors and textile types
+          were also common. Neat small neat patterns or stripes of contrast were in. so were
+          full skirts, decorated ribbon bows, fitting short puffed sleeves. Hair often coiled
+          and looped to back, something like buns covered by a net, hats, bonnets with ribbon
+          trimmings topped with flowers or ribbons.
+        </p>
+
+
+        <!--charchaters -->
+        <hr>
+        <img src="img-tuck-THEMAN2.png"
+             alt="Costume Design Development"
+             class="modal-image">
+        <p><b>Man in the Yellow Suit Analysis:</b> </p>
+        <p>Age: late 50’s early 60s -no age given</p>
+        <p>Personality type: manipulative, deceitful, sly, opportunistic, mysterious</p>
+        <p>Clothing examples: sleazy for 1800s, stand out, oddly put together</p>
+        <P>Facial Expressions/Makeup: wrinkles</P>
+        <!--charchaters -->
+        <hr>
+        <img src="img-tuck-winnie.JPG"
+             alt="Costume Design Development"
+             class="modal-image">
+        <p><b>Winnie Foster  Analysis:</b> </p>
+        <p>Winnie (main character) from a wealthy family, as the own their
+          home cabin and part of the woods that has the magical spring. </p>
+        <p>Age: 10 years old</p>
+        <p>Personality type: curious yet restless</p>
+        <p>Clothing examples:  for the late 1800s- clean, tidy, cut, rich</p>
+        <p>Facial Expressions/Makeup: flushed look, - youthful, but also considering the heat of August Sun. </p>
+    
+        <!--charchaters -->
+        <hr>
+        <img src="img-tuck-mae.PNG"
+             alt="Costume Design Development"
+             class="modal-image">
+        <p><b>Mae Tuck Analysis: </b></p>
+        <p>Age: late 30’s early 40s -no age given, actual around 130yrs old</p>
+        <p>Personality type: nurturing, motherly, kind, strong sense of morality</p>
+        <p>Clothing examples: patchy, layers, warmth</p>
+        <p>Additional info: Mae Tuck is a gentle wife and a fierce protective mother of two boys. 
+          Described in the book as a great potatoes woman’ alluded to her being bigger than most 
+          women at that time. Aware of her fate with immortality, Mae was determined to live her
+          life as it came and not complain. Her clothes, while often torn, unsophisticated, yet 
+          intricate, encompassed her down-to-earth nature. The layers and textures of her clothing
+          suggest a life shaped by simplicity and durability. Mae's unpretentious yet carefully 
+          chosen garments symbolize her connection to the natural world. With this design the reader
+          glimpses the essence of Mae Tuck as a character rooted in the timeless and practical 
+          aspects of existence. One as a friend to Winnie Foster, and another as wife to Tuck and 
+          a mother to Jesse and Miles.</p>
+        <p></p>
+        <!--charchaters -->
+        <hr>
+        <img src="img-tuck-jesse.PNG"
+             alt="Costume Design Development"
+             class="modal-image">
+        <p><b>Jesse Tuck Analysis:</b> </p>
+        <p>Age: 17 but actually 104 years old</p>
+        <p>Personality type: playful, adventurous, youthful, free spirited</p>
+        <p>Clothing examples: free and open minded for the late 1800s, </p>
+        <p>Facial Expressions/Makeup: curls- described in the book for having wild curls, tan- 
+          as he is more adventurous in the outdoors and free spirited </p>
+        <p></p>
+        
+        <!--sources-->
+        <hr>
+        <h4>Sources</h4>
+        
+          <ul>
+            <li>Procreate App - sketching/illustrating </li>
+            <li>Figma - presentation</li>
+            <li>Book- Tuck Everlasting</li>
+            <li>Pinterest/Google - mood board</li>
+            <li>University of Washington Libraries. 'Fashion Trends.' Fashion Plate Collection. Accessed Jan 2024. "https://content.lib.washington.edu/costumehistweb/fashion-trends.html#:~:text=%22During%20the%201860%2D85%20period,blue%20on%20pale%20green%2Dgray" </li>
+            <li>Hughes, Amy R. "Paint-Color Ideas for Ornate Victorian Houses." This Old House. Accessed Jan 2024. https://www.thisoldhouse.com/painting/21018359/paint-color-ideas-for-ornate-victorian-houses.</li>
+           
+        </ul>
+        <b>by: Araba Bentuma Ocran</b> 
+
+      </div>
+
+  </div>
+  <!--URSINUS-->
+  <section class="theater-project2"  style="width: 100%;">
+
+    <!--<img src="img-uc-play-legup.webp" alt="ursinus" style="width: 100%;">-->
+
+    <div class="project-caption">
+        <p>
+             Various Production | Ursinus College<br>
+              Role:  Costume Designer/ Alterations / 2019
+        </p>
+    </div>
+  </section>
+  <section class="three-image-section">
+    <img src="img-uc-play-red.webp" alt="">
+    <img src="img-uc-play-groupup.webp" alt="">
+    <img src="img-uc-play-group.webp" alt="">
+</section>
+  
+  <!--NTSA JIMYMY-->
+  <section class="theater-project3" style="background-color: #efd10f">
+
+    <div class="project-caption">
+        <p>
+          Jimmy! A Musical fable with almost no historical basis<br>          
+          Role:  Costume Designer/ Alterations / 2024<br>
+          Irondale Center / August 2014<br>
+        </p>
+    </div>
+  </section>
+  <section class="three-image-section">
+    <img src="img-jimmy-alien-closeup.jpg" alt="">
+    <img src="img-jimmy-carter1.jpg" alt="">
+    <img src="img-jimmy-cater-ufo.jpg" alt="">
+</section>
+  <section class="three-image-section">
+    <img src="img-jimmy-aliens.png" alt="">
+    <img src="img-jimmy-tableread.jpg" alt="">
+    <img src="img-jimmy-carter-poster.png" alt="">
+</section><br>
+  
+  
+  
+  
+  <footer>
+    <p style="font-size: 14px;">2026 BNTUMA™ | Terms | coded by BNTUMA Studio </p>
+  </footer>
+    <script src="Navbar.js"></script>
+  <script>
+function openModal(modalID) {
+    document.getElementById(modalID).style.display = "block";
+    document.body.style.overflow = "hidden";
+}
+
+function closeModal(event, modalID) {
+    event.stopPropagation();
+
+    document.getElementById(modalID).style.display = "none";
+    document.body.style.overflow = "auto";
+}
+
+
+/* Close modal when clicking outside white content */
+
+window.addEventListener("click", function(event) {
+
+    if (event.target.classList.contains("project-modal")) {
+        event.target.style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+
+});
+
+
+/* Close modal with ESC key */
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+
+        document.querySelectorAll(".project-modal").forEach(function(modal) {
+            modal.style.display = "none";
+        });
+
+        document.body.style.overflow = "auto";
+    }
+
+});
+</script>
+  
+
 </body>
 </html>
