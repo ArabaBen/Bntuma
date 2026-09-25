@@ -58,29 +58,83 @@
         }
         .grid p{
         }
+        
+        
+        .main-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: black;
+    padding: 8px;
+}
+
+.main-nav a {
+    flex: 1;
+
+    padding: 8px 16px;
+
+    color: white;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 22px;
+}
+
+.main-nav a:hover {
+    background-color: #cccccc;
+    color: black;
+}
+
+@media (max-width: 600px) {
+
+    .main-nav {
+        padding: 6px;
+    }
+
+    .main-nav a {
+        padding: 8px 4px;
+        font-size: 16px;
+    }
+}
       </style>
 
 </head>
 <body>
-  <header>
+    <header>
+    <!-- Navigation -->
+<div class="main-nav">
+    <a href="home.html" a class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+   </div>
+</header>
+   <!--
+   <header>
     <img src="logo2.png" width="200px">
     <div class="menu-btn" onclick="toggleMenu()">☰</div>
     <nav id="mobileMenu">
       <ul>
-       <li><a href="home.html">Home</a></li>
+       <li><a href="home.html" a class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a class="active" href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
+  -->
 
 
   <section class="hero">
     <div class="hero-text">
+      <!--
       <h2>MADE TO WEAR DESIGNS</h2>
       <p style="font-size: 25px">Bringing culture, design, and craftsmanship together.</p>
+      -->
     </div>
      
   </section>
@@ -95,24 +149,26 @@
     <h3>BNTUMA Services &amp; Pricing </h3>
     <div class="grid">
         <div class="card">
-            <a href="BNTUMA%20PRICELIST%202025%20CUSTOMS.pdf" target="_blank"><img src="https://i.pinimg.com/1200x/d7/4e/da/d74eda3f27beb432fe16cc8786bfa9d1.jpg">
+            <a href="BNTUMA%20PRICELIST%202025%20CUSTOMS.pdf" target="_blank">
+                <img src="img-AmaProm-side2.jpg">
             <h4>Bespoke Designing</h4>
             <p>Custom garments made to your unique fit and style.</p>- click for info - 
             </a>
       </div>
       <div class="card">
           <a href="BNTUMA%20PRICELIST%202025-ALTERATIONS.pdf" target="_blank">
-              <img src="https://images.pexels.com/photos/4620622/pexels-photo-4620622.jpeg"><h4>Alterations</h4><p>Professional adjustments for perfect comfort and elegance.</p> - click for info -
+              <img src="img-ally-alt.png"><h4>Alterations</h4><p>Professional adjustments for perfect comfort and elegance.</p> - click for info -
           </a>
       </div>
       <div class="card">
-        <a href="mailto:bntuma.art@gmail.com" target="_blank"><img src="desingntest.jpg">
+        <a href="mailto:bntuma.art@gmail.com" target="_blank"><img src="https://i.pinimg.com/736x/d0/cd/85/d0cd85230f729fc59dad29edaea8f67a.jpg">
             <h4>Textile and Pattern  Consulting</h4>
             <p>Guidance on sourcing sustainable and high-quality fabrics. And pattern testing services.</p> - click for info -
         </a>
       </div>
     <div class="card">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_zHWIp-LTeKbfJYuxhCBGaHFtLcsOAS72W94g3hQhwgOqZw/viewform?usp=dialog" target="_blank"><img src="https://i.pinimg.com/736x/77/43/db/7743dbea4e3e58f08985603be7f1e6a9.jpg">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_zHWIp-LTeKbfJYuxhCBGaHFtLcsOAS72W94g3hQhwgOqZw/viewform?usp=dialog" target="_blank">
+            <img src="https://i.pinimg.com/736x/44/4c/68/444c68864db839758fec4685620a16ba.jpg">
             <h4>Learn to Sew</h4>
             <p>Learn to sew develope a new hobby and build valuable skills through our private one-on-one sewing lessons.</p> - click for info -
         </a>
@@ -128,9 +184,10 @@ Once you’re happy with the direction, we’ll provide the exact project cost. 
 
 We at BNTUMA are proudly BYOF (Bring Your Own Fabric)–friendly — if you have your own materials, we’re happy to transform them into something extraordinary.
 
-As a hands-on, customer-focused studio, we offer a two-week turnaround time. This includes a one-week fitting for try-on and adjustments before your final garment is completed and ready for pickup. Below, you’ll find estimated pricing for custom projects:
+As a hands-on, customer-focused studio, we offer a two-week turnaround time. This includes a one-week fitting for try-on and adjustments before your final garment is completed and ready for pickup. 
+                    <!--Below, you’ll find estimated pricing for custom projects:-->
                 </p>
-                <img src="BNTUMA-cutoms-cropped-priceliste-2025.png">
+                <!--<img src="BNTUMA-cutoms-cropped-priceliste-2025.png">-->
         </div>
     </section>
     <div class="servicesec2">
@@ -153,11 +210,13 @@ Please note that some alterations require notation (buttons, zippers, elastics, 
                     
 To book alteration services, please complete our form here: <a href="https://forms.gle/H2RuECBW9JuBxnm78" target="_blank" style="color: #BC8415; border: 2px solid white;">Inquiry form</a>
 
-Please view price list below:
+<!--Please view price list below:-->
+
 </p>
-                <img src="BNTUMA-ALTERATION-cropped-PRICELIST2025.png">
+               <!--- <img src="BNTUMA-ALTERATION-cropped-PRICELIST2025.png">
                  <p style="text-align: center;">Don’t see the service you need? Reach out to us at <a href="mailto:bntuma.art@gmail.com" style="text-decoration: underline">Bntuma.art@gmail.com</a> and we’ll provide an estimate and confirm feasibility!</p>
                 
+                -->
             </div>
         </section>
     
@@ -188,7 +247,7 @@ Please view price list below:
     
 
   <footer>
-    <p style="font-size: 14px;"> 2026 BNTUMA | Terms | coded by BNTUMA Studio  </p>
+    <p style="font-size: 14px;"> 2026 BNTUMA™ | Terms | coded by BNTUMA™ Studio  </p>
   </footer>
     <script src="Navbar.js">
         function toggleMenu() {
